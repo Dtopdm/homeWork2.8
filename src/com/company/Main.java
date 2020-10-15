@@ -11,7 +11,7 @@ public class Main {
 
         dictionary.put("человек", new String[]{"личность", "персона", "индивидум"});
         dictionary.put("страна", new String[]{"родина", "республика", "государство"});
-        dictionary.put("большой", new String[]{"крыпный", "огромный", "массивный"});
+        dictionary.put("большой", new String[]{"крупный", "огромный", "массивный"});
         dictionary.put("красивый", new String[]{"симпатичный", "привлекательный", "великолепный"});
 
         for (Map.Entry<String, String[]> item : dictionary.entrySet()) {
@@ -41,8 +41,8 @@ public class Main {
                 String word = scanner.nextLine();
                 String[] words = word.split(" ");
                 for (String a : words) {
-                    if (dictionary.get(a) != null) {
-                        String[] synonyms = dictionary.get(a);
+                    if (largeDictionary.get(a) != null) {
+                        String[] synonyms = largeDictionary.get(a);
                         Random r = new Random();
                         int x = r.nextInt(synonyms.length);
                         System.out.printf(synonyms[x] + " ");
